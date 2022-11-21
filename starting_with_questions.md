@@ -5,11 +5,17 @@ Answer the following questions and provide the SQL queries used to find the answ
 
 
 SQL Queries:
+1.
+    select "city", "country", "transactions"
+from all_sessions
+
+2.
+select "city", "country", MAX(distinct "transactions")
+from all_sessions
+group by transactions, city, country;
 
 
-
-Answer:
-
+Answer: 21
 
 
 
@@ -17,12 +23,18 @@ Answer:
 
 
 SQL Queries:
+City, Country:
 
+select AVG(distinct "productRevenue"), "country", "city"
+from all_sessions
+group by "productRevenue", country, city;
 
 
 Answer:
-
-
+58656666.000000000000	"United States"	"not available in demo dataset"
+60365000.000000000000	"United States"	"not available in demo dataset"
+120000000.000000000000	"United States"	"Sunnyvale"
+176400000.000000000000	"United States"	"not available in demo dataset"
 
 
 
@@ -43,6 +55,8 @@ Answer:
 
 
 SQL Queries:
+    select "country", "city", "v2ProductName"
+from all_sessions
 
 
 
