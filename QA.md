@@ -5,4 +5,4 @@ I the case of the data I am working with, some of the personal information could
 
 QA Process:
 Describe your QA process and include the SQL queries used to execute it.
-hello message
+Quality assurance is a crucial step in a process of data analysis. I am not confident in my project to provide more details.
