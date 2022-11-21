@@ -1,6 +1,5 @@
 What are your risk areas? Identify and describe them.
 
-Risks are things that we need to identify when working with data
 
 
 QA Process:
