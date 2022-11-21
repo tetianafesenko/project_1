@@ -36,14 +36,22 @@ Answer: Unique visitors with no cities: 329, the rest has different number of ci
 
 Question 4: Find each unique product viewed by each visitor
 
-SQL Queries:
+SQL Queries (number of unique products):
 
-Answer:
+SELECT COUNT ( DISTINCT "v2ProductName" ) as "v2ProductName"
+FROM all_sessions;
+
+Answer: 471 unique Products
 
 
 
 Question 5: Compute the percentage of visitors to the site that actually makes a purchase
 
 SQL Queries:
+
+SELECT city, COUNT( DISTINCT "fullVisitorId" ) as "fullVisitorIds", "transactions"
+FROM all_sessions
+group by city, transactions;
+
 
 Answer:
