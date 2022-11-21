@@ -7,3 +7,9 @@ If the data we provide is incorrect, the outcomes are not something we can rely 
 
 Queries:
 Below, provide the SQL queries you used to clean your data.
+DELETE FROM
+    all_sessions a
+        USING all_sessions b
+WHERE
+    a."fullVisitorId" < b."fullVisitorId"
+    AND a."fullVisitorId" = b."fullVisitorId";

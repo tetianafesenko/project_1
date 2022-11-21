@@ -6,6 +6,20 @@ FROM all_sessions
 GROUP BY "fullVisitorId"
 HAVING COUNT("fullVisitorId") > 1
 
+OR
+
+SELECT
+    "fullVisitorId",
+    COUNT( "fullVisitorId" )
+FROM
+    all_sessions
+GROUP BY
+    "fullVisitorId"
+HAVING
+    COUNT( "fullVisitorId" )> 1
+ORDER BY
+    "fullVisitorId";
+
 
 
 
