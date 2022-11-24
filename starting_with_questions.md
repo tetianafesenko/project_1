@@ -35,8 +35,6 @@ Answer: "United States"	"not available in demo dataset"	6092.561
 "United States"	"Columbus"	21.99
 "Switzerland"	"Zurich"	16.99
 
-
-
 **Question 2: What is the average number of products ordered from visitors in each city and country?**
 
 
@@ -55,20 +53,6 @@ Answer:
 176400000.000000000000	"United States"	
 
 
-
-**Question 3: Is there any pattern in the types (product categories) of products ordered from visitors in each city and country?**
-
-
-SQL Queries:
-
-
-
-Answer:
-
-
-
-
-
 **Question 4: What is the top-selling product from each city/country? Can we find any pattern worthy of noting in the products sold?**
 
 
@@ -81,20 +65,26 @@ FROM all_sessions) as sub
 	ORDER BY count DESC
 
 
-Answer:
+Question 5:  How much time did the average person spent on the website by country in seconds?
+
+SELECT country, AVG("timeonsite") as avgtime
+FROM all_sessions
+GROUP by country
+HAVING AVG("timeonsite") is not NULL
+ORDER by avgtime DESC
+
+Answer: Peru: 859.181818181818
+        Nigeria: 752.500000000
+        Tunisia: 726.000000000
+        Slovenia: 969.00000000
+        Kenya: 572.33333333333 and etc
 
 
-**Question 5: Can we summarize the impact of revenue generated from each city/country?**
-
-SQL Queries:
-
-
-
-Answer:
 
 
 
 
-
+>>>>>> IMPORTANT NOTE: the above data shows Q5 and Q2:
+Countries where people spend more time browsing website, buy less products. The top buyer is USA but in regards of the time spent browsing website they are not in first 5. Its important for the decision making, marketing campaigns and resources allocation. Byers in USA tend to spend minimum time selecting the products, more tend to buy thinhs faster than other countries. Could be due to economic differences. 
 
 

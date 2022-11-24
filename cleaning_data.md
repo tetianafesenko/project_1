@@ -11,8 +11,6 @@ Cleaning data coulb be separated in few steps:
  - 5. Aligh columns, makesure the formatting is clear and consistent, readble 
  - 6. Check to see how cleaned data is related to the set goals
 
-
-
 Queries:
 Below, provide the SQL queries you used to clean your data.
 

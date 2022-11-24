@@ -20,10 +20,13 @@ HAVING
 ORDER BY
     "fullVisitorId";
 
+### Remove NULL columns which do not bring any value to the data
+ALTER table all_sessions
+        DROP COLUMN searchkeyword, product_refund_amount,
+        item_quality, item_revenue
 
+Answer: The data is nice and clean
 
-
-Answer: 
 Thanks to the above query I found the number of dublicates in "fullvisitorId". Looks like most of the "fullvisitorId" are repeated at least twice.
 
 
@@ -36,7 +39,6 @@ FROM all_sessions;
 Answer: 14223
 
 
-
 Question 3: Find the total number of unique visitors by referring sites
 
 SQL Queries:
@@ -45,7 +47,6 @@ FROM all_sessions
 group by city;
 
 Answer: Unique visitors with no cities: 329, the rest has different number of cities associated with the unique "fullVisitorId"
-
 
 
 Question 4: Find each unique product viewed by each visitor
@@ -58,14 +59,3 @@ FROM all_sessions;
 Answer: 471 unique Products
 
 
-
-Question 5: Compute the percentage of visitors to the site that actually makes a purchase
-
-SQL Queries:
-
-SELECT city, COUNT( DISTINCT "fullVisitorId" ) as "fullVisitorIds", "transactions"
-FROM all_sessions
-group by city, transactions;
-
-
-Answer:
