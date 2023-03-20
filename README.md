@@ -21,10 +21,10 @@ Challenges when importing data
 Different number of sales and products sold per territory or city
 
 ## Challenges 
-Challenges when importing data 
+Challenges when importing data: 
 
 1. Formatting
-2. Large data sets to work with
+2. Large data sets to work with and to organize
 3. Chosing the best tool to work with data
 4. Time consuming
 
