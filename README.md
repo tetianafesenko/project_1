@@ -32,3 +32,4 @@ Challenges when importing data:
 >>>>>> Data Analysis is very important
 >>>>>> Allocate your time and resources to comlete the required workflow
 >>>>>> Present data to stakeholders and help make a difference in the business development
+>>>>>> Analyze and combine the data findings
